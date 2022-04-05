@@ -1,8 +1,8 @@
 class Solution:
     def mostWordsFound(self, sentences: List[str]) -> int:
-        max=0
+        
+        a=[]
         for i in sentences:
-            a=[x for x in i.split(' ')]
-            if(len(a)>max): max=len(a)
+            a.append(len([x for x in i.split(' ')]))
                 
-        return max
+        return max(a)
